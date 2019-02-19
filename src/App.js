@@ -1,11 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import './normalize.css';
 import './skeleton.css';
 
+import Formulario from './component/Formulario';
+
 class App extends Component {
 	render() {
-		return <p>Hello world</p>;
+		return (
+			<Fragment>
+				<h1>Loan quote</h1>
+				<div className="container">
+					<Formulario />
+				</div>
+			</Fragment>
+		);
 	}
 }
 
