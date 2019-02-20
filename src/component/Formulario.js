@@ -6,6 +6,15 @@ class Formulario extends Component {
 		term: ''
 	};
 
+	calculatePay = (e) => {
+		e.prevenDefault();
+
+		//Aply destructuring
+		const { quantity, term } = this.state;
+
+		this.props.loanData(quantity, term);
+	};
+
 	updateState = (e) => {
 		//read the form data
 		console.log(e.target.value);
@@ -29,7 +38,7 @@ class Formulario extends Component {
 
 	render() {
 		return (
-			<form>
+			<form onSubmit={this.calculatePay}>
 				<div>
 					<label>Loan amount</label>
 					<input
@@ -52,7 +61,7 @@ class Formulario extends Component {
 				</div>
 				<div>
 					<input
-						disable={this.enableSubmit()}
+						disabled={this.enableSubmit()}
 						type="submit"
 						value="Calculate"
 						className="u-full-width button-primary"

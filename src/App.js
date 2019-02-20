@@ -4,14 +4,19 @@ import './normalize.css';
 import './skeleton.css';
 
 import Formulario from './component/Formulario';
+import { calculateTotal } from './helpers';
 
 class App extends Component {
+	loanData = (quantity, term) => {
+		calculateTotal();
+	};
+
 	render() {
 		return (
 			<Fragment>
 				<h1>Loan quote</h1>
 				<div className="container">
-					<Formulario />
+					<Formulario loanData={this.loanData} />
 				</div>
 			</Fragment>
 		);
