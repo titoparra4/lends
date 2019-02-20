@@ -7,7 +7,7 @@ class Formulario extends Component {
 	};
 
 	calculatePay = (e) => {
-		e.prevenDefault();
+		e.preventDefault();
 
 		//Aply destructuring
 		const { quantity, term } = this.state;

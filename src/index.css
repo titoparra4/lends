@@ -27,10 +27,20 @@ h1 {
 	min-height: 80vh;
 }
 
-form {
+form,
+.messages {
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 2rem;
+}
+
+.messages {
+	text-align: center;
+}
+
+.result {
+	border: 2px solid #00b0d7;
+	padding: 3rem 0;
 }
 
 form label {
