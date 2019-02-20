@@ -18,6 +18,15 @@ class Formulario extends Component {
 		});
 	};
 
+	enableSubmit = () => {
+		//apply destructuring
+		const { quantity, term } = this.state;
+		//read the variables
+		const noValid = !quantity || !term;
+		//return an answer
+		return noValid;
+	};
+
 	render() {
 		return (
 			<form>
@@ -42,7 +51,12 @@ class Formulario extends Component {
 					</select>
 				</div>
 				<div>
-					<input type="submit" value="Calculate" className="u-full-width button-primary" />
+					<input
+						disable={this.enableSubmit()}
+						type="submit"
+						value="Calculate"
+						className="u-full-width button-primary"
+					/>
 				</div>
 			</form>
 		);
