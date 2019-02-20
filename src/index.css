@@ -10,3 +10,11 @@ body {
 	height: 100%;
 	background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
 }
+
+.container {
+	background-color: white;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-top: 2rem;
+	min-height: 80vh;
+}
