@@ -22,7 +22,7 @@ class App extends Component {
 
 		this.setState(
 			{
-				cargando: true
+				loading: true
 			},
 			() => {
 				setTimeout(() => {
